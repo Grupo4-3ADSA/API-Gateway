@@ -11,9 +11,10 @@ public class SpringCloudConfig {
 	@Bean
 	public RouteLocator gatewayRoutes(RouteLocatorBuilder builder) {
 		return builder.routes()
-				.route(r -> r.path("/companies/**")
+				.route(r -> r.path("/**")
 						.uri("lb://register"))
 				.build();
 				
 	}
+	
 }

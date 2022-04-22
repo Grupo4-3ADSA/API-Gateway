@@ -11,3 +11,13 @@ eureka:
 spring:
   application:
     name: 'gateway'
+#  cloud:
+#    gateway:
+#      globalcors:
+#        corsConfigurations:
+#          '[/**]':
+#            allowedOrigins: "http://localhost:8080"
+#            allowedHeaders: "*"
+#            allowedMethods:
+#            - GET
+#            - POST
