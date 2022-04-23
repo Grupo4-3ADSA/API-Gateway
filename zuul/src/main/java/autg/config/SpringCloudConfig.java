@@ -14,7 +14,5 @@ public class SpringCloudConfig {
 				.route(r -> r.path("/**")
 						.uri("lb://register"))
 				.build();
-				
 	}
-	
 }
