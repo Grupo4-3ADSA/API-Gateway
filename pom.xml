@@ -70,6 +70,34 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<plugin>
+				<groupId>com.microsoft.azure</groupId>
+				<artifactId>azure-webapp-maven-plugin</artifactId>
+				<version>2.0.0</version>
+				<configuration>
+					<schemaVersion>v2</schemaVersion>
+					<subscriptionId>786d54fa-2750-406e-9f5b-776b8bb231ed</subscriptionId>
+					<resourceGroup>apis</resourceGroup>
+					<appName>api-gateway-autg</appName>
+					<pricingTier>P1v2</pricingTier>
+					<region>centralus</region>
+					<runtime>
+						<os>Linux</os>
+						<javaVersion>Java 11</javaVersion>
+						<webContainer>Java SE</webContainer>
+					</runtime>
+					<deployment>
+						<resources>
+							<resource>
+								<directory>${project.basedir}/target</directory>
+								<includes>
+									<include>*.jar</include>
+								</includes>
+							</resource>
+						</resources>
+					</deployment>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 
