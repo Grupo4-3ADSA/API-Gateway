@@ -6,8 +6,8 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka
-      
+      defaultZone: https://eureka-server-autg.azurewebsites.net/eureka
+
 spring:
   application:
     name: 'gateway'
